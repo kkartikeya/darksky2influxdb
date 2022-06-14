@@ -4,7 +4,7 @@
   "description": "Stores weather forcecast data from darkskyapi into a influxdb database",
   "main": "importForecast.js",
   "dependencies": {
-    "config": "^1.25.1",
+    "config": "^3.3.7",
     "influx": "^5.0.7",
     "js-yaml": "^3.8.3",
     "darksky-node": "^0.0.2",
