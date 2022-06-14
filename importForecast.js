@@ -66,6 +66,8 @@ var getForecast = function () {
         }
         else {
             var forecast = JSON.parse(responseBody)
+            console.log(responseBody)
+            console.log(forecast)
 
 
             var daily = forecast.daily;
