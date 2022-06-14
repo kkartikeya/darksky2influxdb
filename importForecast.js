@@ -53,11 +53,7 @@ const influx = new Influx.InfluxDB({
 
 const darksky = new DarkSky(darkskyConfig.key);
 
-var getForecast = function () {
-    console.log(darkskyConfig.latitude)
-    console.log(darkskyConfig.longitude)
-    console.log(darkskyConfig.key)
-    
+var getForecast = function () {    
     darksky.forecast(darkskyConfig.latitude, darkskyConfig.longitude, {
         exclude: ['minutely', 'currently', 'alerts', 'flags'],
         units: darkskyConfig.units,
@@ -70,9 +66,6 @@ var getForecast = function () {
         }
         else {
             var forecast = JSON.parse(responseBody)
-            console.log(responseBody)
-            console.log(forecast)
-
 
             var daily = forecast.daily;
             var hourly = forecast.hourly;
